@@ -69,7 +69,7 @@ function App() {
     });
 
     setProductQuantity(newProductQuantity);
-  }, []);
+  },[]);
 
   // Fetch all products
   useEffect(() => {
