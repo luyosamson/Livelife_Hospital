@@ -25,7 +25,7 @@ function PractitionerDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen,
 
   function updatePersonProfile(profileId){
     console.log("person details: ", personDetails)
-    fetch(`https://newlife-backend-production.up.railway.app/practitioner_profiles/${profileId}`, {
+    fetch(`https://localhost:3000/practitioner_profiles/${profileId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function PractitionerDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen,
   }
 
   function addNewProfile(personId){
-    fetch(`https://newlife-backend-production.up.railway.app/practitioner_profiles`, {
+    fetch(`https://localhost:3000/practitioner_profiles`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

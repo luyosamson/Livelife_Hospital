@@ -21,7 +21,7 @@ function PractitionerCreateAppointment({loggedIn, userType}) {
   }
   
   useEffect(() => {
-    fetch('https://newlife-backend-production.up.railway.app/patient_profiles', {
+    fetch('https://localhost:3000/patient_profiles', {
       headers: {"Accept": "application/json", "Authorization": localStorage.getItem("token")}
     })
     .then((response) => {

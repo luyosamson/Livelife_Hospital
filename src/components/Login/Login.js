@@ -9,8 +9,8 @@ function Login({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) {
     prac_checkbox: false,
   });
   const [error, setError] = useState("");
-  const patientLoginLink = "https://newlife-backend-production.up.railway.app/login";
-  const practitionerLoginLink = "https://newlife-backend-production.up.railway.app/practitioner/login";
+  const patientLoginLink = "http://localhost:3000/login";
+  const practitionerLoginLink = "http://localhost:3000/practitioner/login";
   const history = useHistory();
 
   if (loggedIn) {
@@ -22,9 +22,10 @@ function Login({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) {
       history.push("/admin/me");
     }
   }
+  
 
   function getAndStoreCartData(patientId){
-    fetch(`https://newlife-backend-production.up.railway.app/users/${patientId}/cart`, {
+    fetch(`http://localhost:3000/users/${patientId}/cart`, {
       headers: {"Accept": "application/json", "Authorization": localStorage.getItem("token")}
     })
     .then(res => {

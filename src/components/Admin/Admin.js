@@ -29,11 +29,11 @@ const AllPractitioners = ({ loggedIn, userType }) => {
 
   // Fetches all practitioners & Products
   useEffect(() => {
-    fetch(`https://newlife-backend-production.up.railway.app/practitioner_profiles`)
+    fetch(`http://localhost:3000/practitioner_profiles`)
       .then((r) => r.json())
       .then((d) => setPracs(d));
 
-    fetch(`https://newlife-backend-production.up.railway.app/products`)
+    fetch(`http://localhost:3000/products`)
       .then((r) => r.json())
       .then((d) => setProducts(d));
   }, []);

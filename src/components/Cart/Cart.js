@@ -75,7 +75,7 @@ function Cart({
   // })
 
   const handlePostToCart = (item) => {
-    fetch('https://newlife-backend-production.up.railway.app/shopping_carts', {
+    fetch('http://localhost:3000/shopping_carts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({}),
@@ -84,7 +84,7 @@ function Cart({
 
   const handleDeleteFromCart = (item) => {
     fetch(
-      `https://newlife-backend-production.up.railway.app/shopping_carts/${item.id}`,
+      `http://localhost:3000/shopping_carts/${item.id}`,
       {
         method: 'DELETE',
       }
@@ -126,7 +126,7 @@ function Cart({
 
   function updateDatabaseQty(cartId, newQuantity) {
     fetch(
-      `https://newlife-backend-production.up.railway.app/shopping_carts/${cartId}`,
+      `http://localhost:3000/shopping_carts/${cartId}`,
       {
         method: 'PATCH',
         headers: {
@@ -175,7 +175,7 @@ function Cart({
     const deletedCartItem = product.cart_id;
 
     fetch(
-      `https://newlife-backend-production.up.railway.app/shopping_carts/${deletedCartItem}`,
+      `http://localhost:3000/shopping_carts/${deletedCartItem}`,
       {
         method: 'DELETE',
         headers: { Authorization: localStorage.getItem('token') },

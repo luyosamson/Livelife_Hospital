@@ -28,13 +28,13 @@ const EditProduct = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.patch(`https://newlife-backend-production.up.railway.app/products/${id}`, user);
+    await axios.patch(`http://localhost:3000/products/${id}`, user);
     history.push('/admin/products');
   };
 
   const loadUser = async () => {
     const result = await axios.get(
-      `https://newlife-backend-production.up.railway.app/products/${id}`,
+      `http://localhost:3000/products/${id}`,
       user
     );
     setUser(result.data);

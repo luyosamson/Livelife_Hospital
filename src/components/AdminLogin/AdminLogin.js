@@ -21,7 +21,7 @@ function AdminLogin({ loggedIn, setLoggedIn, userType, setUserType }) {
   function handleLoginSubmit(e) {
     e.preventDefault();
     // setPracCheckbox(false);
-    fetch('https://newlife-backend-production.up.railway.app/admin/login', {
+    fetch('http://localhost:3000/admin/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

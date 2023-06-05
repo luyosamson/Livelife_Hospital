@@ -22,7 +22,7 @@ function PractitionerChat({loggedIn, userType}) {
 
   function updateAppointments(){
     const token = localStorage.getItem("token")
-    const appointmentsApiEndpoint = `https://newlife-backend-production.up.railway.app/practitioners/${personId}/appointments`
+    const appointmentsApiEndpoint = `https://localhost:3000/practitioners/${personId}/appointments`
 
     fetch(appointmentsApiEndpoint, {
       headers: {
@@ -67,7 +67,7 @@ function PractitionerChat({loggedIn, userType}) {
       content: message
     }
 
-    fetch('https://newlife-backend-production.up.railway.app/messages', {
+    fetch('https://localhost:3000/messages', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

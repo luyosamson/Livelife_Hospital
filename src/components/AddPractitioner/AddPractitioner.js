@@ -17,7 +17,7 @@ const AddPractitioner = () => {
 
   // Fetch All Departments
   useEffect(() => {
-    fetch(`https://newlife-backend-production.up.railway.app/departments`)
+    fetch(`http://localhost:3000/departments`)
       .then((r) => r.json())
       .then((d) => setDepartments(d));
   }, []);
@@ -25,7 +25,7 @@ const AddPractitioner = () => {
   // Handles Practitioner Signup
   const handleAddPractitioner = (e) => {
     e.preventDefault();
-    fetch(`https://newlife-backend-production.up.railway.app/practitioner/signup`, {
+    fetch(`http://localhost:3000/practitioner/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

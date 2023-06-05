@@ -34,6 +34,7 @@ import ResetPassword from './ResetPassword/ResetPassword';
 import EditPractitioner from './Admin/EditPractitioner';
 import EditProduct from './Admin/EditProduct';
 import AddPractitionerProfile from './AddPractitioner/AddPractitionerProfile';
+// import PatientSidebar from './PatientSidebar/PatientSidebar';
 
 function App() {
   const [userAdmin, setUserAdmin] = useState(true);
@@ -76,7 +77,7 @@ function App() {
     const fetchProducts = async () => {
       setLoading(true);
       // const response = await fetch('https://fakestoreapi.com/products');
-      const response = await fetch('https://newlife-backend-production.up.railway.app/products');
+      const response = await fetch('http://localhost:3000/products');
       const results = await response.json();
 
       // Sort Products Logic on shop page
@@ -161,7 +162,7 @@ function App() {
   
   // Get & Store all product categories
   useEffect(() => {
-    fetch(`https://newlife-backend-production.up.railway.app/products`)
+    fetch(`http://localhost:3000/products`)
       .then((res) => res.json())
       .then((data) => {
         data.map((d) => productCategories.push(d.category));

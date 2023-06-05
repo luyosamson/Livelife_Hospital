@@ -24,7 +24,7 @@ function PatientDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen, pers
   }
 
   function updatePersonProfile(profileId){
-    fetch(`https://newlife-backend-production.up.railway.app/patient_profiles/${profileId}`, {
+    fetch(`http://localhost:3000/patient_profiles/${profileId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ function PatientDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen, pers
   }
 
   function addNewProfile(personId){
-    fetch(`https://newlife-backend-production.up.railway.app/patient_profiles`, {
+    fetch(`http://localhost:3000/patient_profiles`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

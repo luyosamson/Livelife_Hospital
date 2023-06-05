@@ -26,13 +26,13 @@ function AddPractitionerProfile() {
 
   // Fetch selected practitioner's profile
   useEffect(() => {
-    fetch(`https://newlife-backend-production.up.railway.app/practitioners`, {
+    fetch(`http://localhost:3000/practitioners`, {
       headers: { Authorization: token },
     })
       .then((r) => r.json())
       .then((d) => setPractitioners(d));
 
-    fetch(`https://newlife-backend-production.up.railway.app/practitioners/${practitionerID}`, {
+    fetch(`http://localhost:3000/practitioners/${practitionerID}`, {
       headers: { Authorization: token },
     })
       .then((r) => r.json())
@@ -43,7 +43,7 @@ function AddPractitionerProfile() {
   // Handles Practitioner Profile data
   const handleFillProfileDetails = (e) => {
     e.preventDefault()
-    fetch(`https://newlife-backend-production.up.railway.app/practitioner_profiles`, {
+    fetch(`http://localhost:3000/practitioner_profiles`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: token },
       body: JSON.stringify({
