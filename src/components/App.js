@@ -230,6 +230,7 @@ function App() {
         <Route exact path="/patients/details-popup">
           <PatientDetailsPopup loggedIn={loggedIn} userType={userType} />
         </Route>
+        
         {/* == PATIENT ROUTES */}
         {/* == PRACTITIONER ROUTES */}
         <Route exact path="/practitioners/me">
