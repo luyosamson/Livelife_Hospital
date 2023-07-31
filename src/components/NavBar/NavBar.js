@@ -40,7 +40,7 @@ function NavBar({ loggedIn, setLoggedIn, userType, setUserType, cartItems }) {
             <i class='fa-solid fa-location-dot'></i> Nextlane Plaza, Nairobi,
             Kenya{' '}
             <i class='fa-solid fa-phone' style={{ paddingLeft: '10px' }}></i>{' '}
-            +254712 345 678
+            +254797411980
           </div>
           <div className='topbar2'>
             <a target='_blank' rel='noreferrer' href='https://www.facebook.com'>
