@@ -67,7 +67,7 @@ function NavBar({ loggedIn, setLoggedIn, userType, setUserType, cartItems }) {
             <div className='logo'>
               <img src={logo} alt='Logo' />
               <div className='logo-txt'>
-                <p id='logo-txt1'>NewLife Hospital</p>
+                <p id='logo-txt1'>Dr.Sam Hospital</p>
                 <p id='logo-txt2'>Dedication beyond measure.</p>
               </div>
             </div>
