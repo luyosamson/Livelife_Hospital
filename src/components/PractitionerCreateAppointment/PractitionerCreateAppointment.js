@@ -21,7 +21,7 @@ function PractitionerCreateAppointment({loggedIn, userType}) {
   }
   
   useEffect(() => {
-    fetch('https://localhost:3000/patient_profiles', {
+    fetch('https://newlife-47hr.onrender.com/patient_profiles', {
       headers: {"Accept": "application/json", "Authorization": localStorage.getItem("token")}
     })
     .then((response) => {

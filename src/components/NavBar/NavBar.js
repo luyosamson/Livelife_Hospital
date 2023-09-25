@@ -19,10 +19,10 @@ function NavBar({ loggedIn, setLoggedIn, userType, setUserType, cartItems }) {
 
     const logoutEndpoint =
       userType == 'patient'
-        ? 'https://newlife-backend-production.up.railway.app/logout'
+        ? 'https://newlife-47hr.onrender.com/logout'
         : userType == 'practitioner'
-        ? 'https://newlife-backend-production.up.railway.app/practitioner/logout'
-        : 'https://newlife-backend-production.up.railway.app/admin/logout';
+        ? 'https://newlife-47hr.onrender.com/practitioner/logout'
+        : 'https://newlife-47hr.onrender.com/admin/logout';
 
     fetch(logoutEndpoint, {
       method: 'DELETE',

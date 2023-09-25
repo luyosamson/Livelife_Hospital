@@ -8,7 +8,7 @@ function PractitionerAppointments({loggedIn, userType}) {
   // =========================
   const token = localStorage.getItem('token');
   const personId = JSON.parse(localStorage.getItem('person') || false)?.id;
-  const appointmentsApiEndpoint = `http://localhost:3000/practitioners/${personId}/appointments`;
+  const appointmentsApiEndpoint = `https://newlife-47hr.onrender.com/practitioners/${personId}/appointments`;
   const [appointments, setAppointments] = useState(
     JSON.parse(localStorage.getItem('person') || false)?.appointments || []
   );
@@ -56,7 +56,7 @@ function PractitionerAppointments({loggedIn, userType}) {
   }, []);
 
   function handleDeleteAppointment(deletedAppointment) {
-    fetch(`http://localhost:3000/appointments/${deletedAppointment.id}`, {
+    fetch(`https://newlife-47hr.onrender.com/appointments/${deletedAppointment.id}`, {
       method: 'DELETE',
       headers: {
         Accept: 'application/json',

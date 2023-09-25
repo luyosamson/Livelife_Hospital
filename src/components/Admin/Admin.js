@@ -29,11 +29,11 @@ const AllPractitioners = ({ loggedIn, userType }) => {
 
   // Fetches all practitioners & Products
   useEffect(() => {
-    fetch(`http://localhost:3000/practitioner_profiles`)
+    fetch(`https://newlife-47hr.onrender.com/practitioner_profiles`)
       .then((r) => r.json())
       .then((d) => setPracs(d));
 
-    fetch(`http://localhost:3000/products`)
+    fetch(`https://newlife-47hr.onrender.com/products`)
       .then((r) => r.json())
       .then((d) => setProducts(d));
   }, []);

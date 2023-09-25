@@ -77,7 +77,7 @@ function App() {
     const fetchProducts = async () => {
       setLoading(true);
       // const response = await fetch('https://fakestoreapi.com/products');
-      const response = await fetch('http://localhost:3000/products');
+      const response = await fetch('https://newlife-47hr.onrender.com/products');
       const results = await response.json();
 
       // Sort Products Logic on shop page
@@ -162,7 +162,7 @@ function App() {
   
   // Get & Store all product categories
   useEffect(() => {
-    fetch(`http://localhost:3000/products`)
+    fetch(`https://newlife-47hr.onrender.com/products`)
       .then((res) => res.json())
       .then((data) => {
         data.map((d) => productCategories.push(d.category));

@@ -40,7 +40,7 @@ const AllProducts = ({ loggedIn, userType }) => {
   }, []);
 
   const loadProduct = async () => {
-    const result = await axios.get('http://localhost:3000/products');
+    const result = await axios.get('https://newlife-47hr.onrender.com/products');
     setProducts(result.data);
     setSearchQuery(result.data);
   };
@@ -66,7 +66,7 @@ const AllProducts = ({ loggedIn, userType }) => {
 
   // Handle Delete Product
   const handleDeleteProduct = (deletedProduct) => {
-    fetch(`http://localhost:3000/admins/${adminId}/products/${deletedProduct.id}`, {
+    fetch(`https://newlife-47hr.onrender.com/admins/${adminId}/products/${deletedProduct.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

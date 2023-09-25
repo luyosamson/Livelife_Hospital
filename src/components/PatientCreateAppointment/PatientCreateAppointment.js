@@ -27,7 +27,7 @@ function PatientCreateAppointment({loggedIn, userType}) {
   }
 
   useEffect(() => {
-    fetch("http://localhost:3000/practitioners", {
+    fetch("https://newlife-47hr.onrender.com/practitioners", {
       method: 'GET',
       headers: {
         "Accept": "application/json",
@@ -49,7 +49,7 @@ function PatientCreateAppointment({loggedIn, userType}) {
   function handleSubmitAppoitmentRequest(e){
     e.preventDefault()
 
-    fetch("http://localhost:3000/appointments", {
+    fetch("https://newlife-47hr.onrender.com/appointments", {
       method: 'POST',
       headers: {
         "Accept": "application/json",

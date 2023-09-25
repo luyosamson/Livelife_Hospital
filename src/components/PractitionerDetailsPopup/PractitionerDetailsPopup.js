@@ -25,7 +25,7 @@ function PractitionerDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen,
 
   function updatePersonProfile(profileId){
     console.log("person details: ", personDetails)
-    fetch(`https://localhost:3000/practitioner_profiles/${profileId}`, {
+    fetch(`https://newlife-47hr.onrender.com/practitioner_profiles/${profileId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function PractitionerDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen,
   }
 
   function addNewProfile(personId){
-    fetch(`https://localhost:3000/practitioner_profiles`, {
+    fetch(`https://newlife-47hr.onrender.com/practitioner_profiles`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

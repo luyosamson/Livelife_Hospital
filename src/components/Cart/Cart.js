@@ -75,7 +75,7 @@ function Cart({
   // })
 
   const handlePostToCart = (item) => {
-    fetch('http://localhost:3000/shopping_carts', {
+    fetch('https://newlife-47hr.onrender.com/shopping_carts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({}),
@@ -84,7 +84,7 @@ function Cart({
 
   const handleDeleteFromCart = (item) => {
     fetch(
-      `http://localhost:3000/shopping_carts/${item.id}`,
+      `https://newlife-47hr.onrender.com/shopping_carts/${item.id}`,
       {
         method: 'DELETE',
       }
@@ -126,7 +126,7 @@ function Cart({
 
   function updateDatabaseQty(cartId, newQuantity) {
     fetch(
-      `http://localhost:3000/shopping_carts/${cartId}`,
+      `https://newlife-47hr.onrender.com/shopping_carts/${cartId}`,
       {
         method: 'PATCH',
         headers: {
@@ -175,7 +175,7 @@ function Cart({
     const deletedCartItem = product.cart_id;
 
     fetch(
-      `http://localhost:3000/shopping_carts/${deletedCartItem}`,
+      `https://newlife-47hr.onrender.com/shopping_carts/${deletedCartItem}`,
       {
         method: 'DELETE',
         headers: { Authorization: localStorage.getItem('token') },

@@ -17,7 +17,7 @@ const AddPractitioner = () => {
 
   // Fetch All Departments
   useEffect(() => {
-    fetch(`http://localhost:3000/departments`)
+    fetch(`https://newlife-47hr.onrender.com/departments`)
       .then((r) => r.json())
       .then((d) => setDepartments(d));
   }, []);
@@ -25,7 +25,7 @@ const AddPractitioner = () => {
   // Handles Practitioner Signup
   const handleAddPractitioner = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3000/practitioner/signup`, {
+    fetch(`https://newlife-47hr.onrender.com/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
